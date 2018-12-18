@@ -10,10 +10,10 @@ public class Main {
         double priceSupply1;
         double priceSupply2;
         double priceSupply3;
-        double profit;
+       // double profit;
         double sales;
         double price;
-        double[] supplyTotal;
+       // double[] supplyTotal;
         String userAnswer = new String();
         Scanner keyboard;
         keyboard = new Scanner(System.in);
@@ -25,6 +25,7 @@ public class Main {
             supplies = keyboard.nextInt();
             System.out.println("How many days of sale do you want to run?");
             days = keyboard.nextInt();
+            if (days== )
             System.out.println("How much does supply 1 cost per item?");
             priceSupply1 = keyboard.nextDouble();
             System.out.println("How many of supply 1 did you buy?");
@@ -39,11 +40,16 @@ public class Main {
             supply_3 = keyboard.nextInt();
             System.out.println("What is the price of the item you sold?");
             price = keyboard.nextDouble();
+
             System.out.println("How many did you sell?");
             sales = keyboard.nextInt();
 
-           // supplyTotal = new double[]{priceSupply1*supply_1+priceSupply2*supply_2+priceSupply3*supply_3};
-           // System.out.println(supplyTotal);
+            double supplyTotal = priceSupply1*supply_1+supply_2*priceSupply2+supply_3*priceSupply3;
+            double totalSales = price*sales;
+            double profit = totalSales-supplyTotal;
+            System.out.println("Your total profit is $"+profit);
+
+
             System.out.println("Would you like to run another calculation?");
 
             userAnswer = keyboard.nextLine();
